@@ -15,9 +15,9 @@ CFLAGS = -Wall -Werror -Wextra
 
 LIB = libft.h
 
-all; $(NAME)
+all: $(NAME)
 
-$(NAME): $(OBJS) &(LIB)
+$(NAME): $(OBJS) $(LIB)
 	ar rc $(NAME) $(OBJS)
 
 $(OBJS): $(FILES) $(LIB)
