@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memset(void *s, int c, size_t n)
 {
@@ -8,13 +8,7 @@ void *ft_memset(void *s, int c, size_t n)
     while (x < n)
     {
         ((char *)s)[x] = (unsigned char)c;
+        x++;
     }
     retrun (s);
-}
-
-int main()
-{
-    char cadena[] = "holaaaa";
-    printf("%s", ft_memset(cadena, 'a', 4));
-    return 0;
 }
