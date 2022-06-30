@@ -16,6 +16,9 @@ ft_strncmp.c \
 ft_strrchr.c \
 ft_tolower.c \
 ft_toupper.c \
+ft_calloc.c \
+ft_strnstr.c \
+ft_strdup.c \
 
 OBJS = $(FILES:.c=.o)
 

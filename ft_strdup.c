@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/24 22:58:51 by agserran          #+#    #+#             */
-/*   Updated: 2022/06/27 18:43:27 by agserran         ###   ########.fr       */
+/*   Created: 2022/06/30 15:16:38 by agserran          #+#    #+#             */
+/*   Updated: 2022/06/30 16:03:50 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	unsigned char	*tmp;
+	char	*memory;
+	size_t	c;
 
-	tmp = (unsigned char *)s;
-	while (n > 0)
-	{
-		if (*tmp == (unsigned char)c)
-			return (tmp);
-		tmp++;
-		n--;
-	}
-	return (NULL);
+	c = ft_strlen(s1);
+	memory = ft_calloc(sizeof(char *), c);
+	if (!memory)
+		return (NULL);
+	ft_memmove(memory, s1, c);
+	return (memory);
 }
