@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 18:35:49 by agserran          #+#    #+#             */
-/*   Updated: 2022/07/02 18:35:49 by agserran         ###   ########.fr       */
+/*   Updated: 2022/07/04 20:36:24 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,19 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	c = ft_strlen(s1);
 	c2 = ft_strlen(s2);
-	memory = ft_calloc(sizeof(char *),c + c2 + 1);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	memory = ft_calloc(c + c2 + 1, sizeof(char));
 	if (!memory)
 		return (NULL);
-	if (*s1)
-	{
+	if (*s1 != 0)
 		ft_memcpy(memory, s1, c);
-		while(*s2)
+	while(*s2 != 0)
 		{
 			memory[c] = *s2;
 			c++;
 			s2++;
 		}
-	}
+	
 	return (memory);
 }
