@@ -15,28 +15,22 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*memory;
+	size_t	c;
 
+	c = (size_t)start;
 	if (!s)
 		return (NULL);
+	if (*s == '\0' || c > ft_strlen(s))
+		return (ft_strdup(""));
 	memory = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!memory)
 		return (NULL);
-	if (*s)
-	{
-		while (len > 0)
+	while (len > 0)
 		{
-			if (*s != start)
-			{
-				s++;
-			}
-			if (*s == start)
-			{
-				*memory = *s;
-				s++;
-				memory++;
-				len--;
-			}
-			return (memory);
+			s[c] = *memory;
+			c++;
+			memory++;
+			len--;
 		}
-	}
+	return (memory);
 }
