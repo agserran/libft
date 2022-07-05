@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	c = ft_strlen(s1);
 	c2 = ft_strlen(s2);
-	memory = ft_calloc(sizeof(char *),c + c2 + 1);
+	memory = (char *)ft_calloc(c + c2 + 1, sizeof(char));
 	if (!memory)
 		return (NULL);
 	if (*s1)
