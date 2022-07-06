@@ -42,5 +42,8 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strdup(const char *s1);
 char		*ft_strjoin(char const *s1, char const *s2);
+void 		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void 		ft_putendl_fd(char *s, int fd);
 
 #endif
