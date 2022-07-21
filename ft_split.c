@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	strc(const char *s, char c)
+static int	strc(const char *s, char c)
 {
 	int	c1;
 	int	cstr;
@@ -30,7 +30,7 @@ int	strc(const char *s, char c)
 	cstr++;
 	return (cstr);
 }
-char	*mr(const char *s, char c)
+static char	*mr(const char *s, char c)
 {
 	int		i;
 	char	*memory;
