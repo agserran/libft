@@ -12,51 +12,53 @@
 
 #include "libft.h"
 
-size_t	largo(long nu)
+static size_t	ft_len(long nu)
 {
-	size_t	c;
+	size_t	len;
 
-	c = 0;
+	len = 0;
 	if (nu == 0)
 	{
-		c++;
-		return(c);
+		len++;
+		return(len);
 	}
 	if (nu < 0)
 	{
 		nu *= -1;
-		c++;
+		len++;
 	}
 	while (nu > 0)
 	{
 		nu = nu / 10;
-		c++;
+		len++;
 	}
-	return (c);
+	return (len);
 }
 char	*ft_itoa(int n)
 {
 	char	*memory;
-	long	num;
 	size_t	len;
+	int		i;
 
-	num = n;
-	len = largo(num);
+	if (n == -2147483648)
+		return (ft_strdup( "-2147483648"));
+	len = ft_len(n);
 	memory = (char *)ft_calloc(len + 1, sizeof(char));
 	if(!s)
 		return(NULL);
 	if (n == 0)
-		memory[0] = 48;
-	if (num < 0)
+		memory[0] = '0';
+	if (n < 0)
 	{
 		memory[0] = '-';
-		num *= -1;
+		n *= -1;
 	}
-	while (num > 0)
+	i = len - 1;
+	while (n > 0)
 	{
-		memory[len] = (num % 10) + 48;
-		num = num / 10;
-		len--;
+		memory[i] = (num % 10) + 48;
+		n = n / 10;
+		i--;
 	}
 	return (memory);
 }

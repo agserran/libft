@@ -14,18 +14,18 @@
 
 static int	strc(const char *s, char c)
 {
-	int	c1;
+	int	i;
 	int	cstr;
 
-	c = 0;
+	i = 0;
 	cstr = 0;
-	if (s[c1] == c)
+	if (s[i] == c)
 		cstr--;
-	while(s[c1] != '\0')
+	while(s[i] != '\0')
 	{
-		if (s[c1] == c && s[c1 + 1] != c || s[c1 + 1] == '\0')
+		if (s[i] == c && s[i + 1] != c || s[i + 1] == '\0')
 			cstr++;
-		c1++;
+		i++;
 	}
 	cstr++;
 	return (cstr);
@@ -70,7 +70,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if(*s && *s != c)
 		{
-			memory(co) = mr(s, c);
+			memory[co] = mr(s, c);
 			co++;
 			while(*s && *s != c)
 				s++;
