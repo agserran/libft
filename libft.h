@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:23:37 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/06 17:38:59 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/06 19:14:15 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,9 @@ char		**ft_split(char const *s, char c);
 size_t 		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 int			ft_atoi(const char *str);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
+void 		ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif

@@ -1,4 +1,4 @@
-FILES = ft_atoi.c \
+SRCS = ft_atoi.c \
 ft_bzero.c \
 ft_isalnum.c \
 ft_isalpha.c \
@@ -29,9 +29,21 @@ ft_strmapi.c \
 ft_split.c \
 ft_strlcpy.c \
 ft_strlcat.c \
+ft_substr.c \
+ft_strjoin.c \
+ft_strtrim.c \
+ft_striteri.c \
 
-OBJS = $(FILES:.c=.o)
+SRCSB = ft_lstadd_back_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstnew_bonus.c \
+ft_lstsize_bonus.c \
 
+OBJS = $(SRCS:.c=.o)
+
+OBJDSB = $(SRCSB
 NAME = libft.a
 
 CFLAGS = -Wall -Werror -Wextra
@@ -43,7 +55,7 @@ all: $(NAME)
 $(NAME): $(OBJS) $(LIB)
 	ar rc $(NAME) $(OBJS)
 
-$(OBJS): $(FILES) $(LIB)
+$(OBJS): $(SRCS) $(LIB)
 	gcc $(FLAGS) -c $(FILES)
 
 clean:
