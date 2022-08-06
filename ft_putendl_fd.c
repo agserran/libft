@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 11:31:44 by agserran          #+#    #+#             */
-/*   Updated: 2022/07/06 11:31:44 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:55:42 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void ft_putendl_fd(char *s, int fd)
 		return ;
 	while (*s)
 	{
-		ft_putchar_fd(*str);
+		ft_putchar_fd(*s, fd);
 		s++;
 	}
 	write (fd, "\n", 1);

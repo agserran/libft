@@ -27,6 +27,8 @@ ft_putnbr_fd.c \
 ft_itoa.c \
 ft_strmapi.c \
 ft_split.c \
+ft_strlcpy.c \
+ft_strlcat.c \
 
 OBJS = $(FILES:.c=.o)
 

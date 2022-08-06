@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 10:22:38 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/01 10:22:38 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:59:50 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
         return (ft_strlen(src));
     while (src[i] != '\0' && i < (dstsize - 1))
     {
-        dst[i] = *((char *)src[i]);
+        dst[i] = *((char *)src + i);
         i++;
     }
     dst[i] = '\0';

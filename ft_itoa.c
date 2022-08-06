@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 11:22:24 by agserran          #+#    #+#             */
-/*   Updated: 2022/07/17 11:22:24 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:52:55 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup( "-2147483648"));
 	len = ft_len(n);
 	memory = (char *)ft_calloc(len + 1, sizeof(char));
-	if(!s)
+	if(!memory)
 		return(NULL);
 	if (n == 0)
 		memory[0] = '0';
@@ -56,7 +56,7 @@ char	*ft_itoa(int n)
 	i = len - 1;
 	while (n > 0)
 	{
-		memory[i] = (num % 10) + 48;
+		memory[i] = (n % 10) + 48;
 		n = n / 10;
 		i--;
 	}
