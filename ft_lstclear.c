@@ -6,13 +6,13 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 18:15:07 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/07 18:19:31 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 20:14:38 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_clear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
