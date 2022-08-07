@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 01:16:00 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/06 19:06:08 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:45:21 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	memory = (char *)ft_calloc(len + 1, sizeof(char));
 	if (memory == NULL)
 		return (NULL);
-	if (start >= len)
+	if (start > len)
 	{
 		memory[0] = '\0';
 		return (memory);
