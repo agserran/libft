@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 11:22:24 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/06 16:52:55 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 21:11:28 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static size_t	ft_len(long nu)
 	if (nu == 0)
 	{
 		len++;
-		return(len);
+		return (len);
 	}
 	if (nu < 0)
 	{
@@ -34,6 +34,7 @@ static size_t	ft_len(long nu)
 	}
 	return (len);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*memory;
@@ -41,11 +42,11 @@ char	*ft_itoa(int n)
 	int		i;
 
 	if (n == -2147483648)
-		return (ft_strdup( "-2147483648"));
+		return (ft_strdup("-2147483648"));
 	len = ft_len(n);
 	memory = (char *)ft_calloc(len + 1, sizeof(char));
-	if(!memory)
-		return(NULL);
+	if (!memory)
+		return (NULL);
 	if (n == 0)
 		memory[0] = '0';
 	if (n < 0)

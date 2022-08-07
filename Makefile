@@ -44,6 +44,7 @@ SRCSB = ft_lstnew.c				\
 		ft_lstiter.c			\
 		ft_lstadd_back.c		\
 		ft_lstdelone.c			\
+		ft_lstmap.c				\
 
 NAME = libft.a
 OBJS_DIR = objs/
@@ -59,7 +60,6 @@ $(OBJS_DIR)%.o : %.c libft.h
 	@clang $(CC_FLAGS) -c $< -o $@
 $(NAME): $(OBJECTS_PREFIXED)
 	@ar r $(NAME) $(OBJECTS_PREFIXED)
-	@echo "Libft Done !🥵"
 all: $(NAME)
 clean:
 	rm -rf $(OBJS_DIR)
@@ -68,6 +68,5 @@ fclean: clean
 re: fclean all
 bonus: $(OBJECTS_BONUS_PREFIXED)
 	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
-	@echo "Libft Bonus Done !"
 
 .PHONY: all clean fclean re bonus

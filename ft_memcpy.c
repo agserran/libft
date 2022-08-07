@@ -6,13 +6,13 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 18:23:14 by agserran          #+#    #+#             */
-/*   Updated: 2022/06/22 18:42:47 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 20:57:08 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	 *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	c;
 

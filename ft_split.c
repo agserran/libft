@@ -6,25 +6,12 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 12:48:35 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/07 17:43:00 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 21:09:54 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	fcked(char **str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != NULL)
-	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
-	str = NULL;
-}
 static int	strc(const char *s, char c)
 {
 	int	i;
@@ -36,7 +23,7 @@ static int	strc(const char *s, char c)
 		cstr--;
 	if (!c)
 		cstr++;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if ((s[i] == c && s[i + 1] != c) || s[i + 1] == '\0')
 			cstr++;
@@ -44,6 +31,7 @@ static int	strc(const char *s, char c)
 	}
 	return (cstr);
 }
+
 static char	*mr(const char *s, char c)
 {
 	int		i;
@@ -65,6 +53,7 @@ static char	*mr(const char *s, char c)
 	}
 	return (memory);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	int		co;
@@ -82,13 +71,11 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		if(*s && *s != c)
+		if (*s && *s != c)
 		{
 			memory[co] = mr(s, c);
-			if (!memory[co])
-				fcked(memory);
 			co++;
-			while(*s && *s != c)
+			while (*s && *s != c)
 				s++;
 		}
 	}

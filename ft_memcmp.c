@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 23:06:58 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/06 17:15:50 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 20:57:47 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	if (n == 0)
-		return ((int)NULL);
+		return ((int) NULL);
 	i = 0;
 	while (i < n)
 	{

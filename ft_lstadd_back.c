@@ -6,27 +6,27 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 10:46:27 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/07 17:53:49 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 21:20:13 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstadd_back(t_list   **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list  *aux;
+	t_list	*aux;
 
-    if (lst == NULL)
-        return ;
-    if (*lst == NULL)
-    {
-        *lst = new;
-        return;
-    }
-    aux = *lst;
-    while (aux->next)
-    {
-       aux = aux->next;
-    }
-    aux->next = new;
+	if (lst == NULL)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	aux = *lst;
+	while (aux->next)
+	{
+		aux = aux->next;
+	}
+	aux->next = new;
 }

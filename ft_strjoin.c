@@ -6,7 +6,7 @@
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 18:35:49 by agserran          #+#    #+#             */
-/*   Updated: 2022/07/04 20:36:24 by agserran         ###   ########.fr       */
+/*   Updated: 2022/08/07 21:06:52 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	if (*s1 != 0)
 		ft_memcpy(memory, s1, c);
-	while(*s2 != 0)
-		{
-			memory[c] = *s2;
-			c++;
-			s2++;
-		}
+	while (*s2 != 0)
+	{
+		memory[c] = *s2;
+		c++;
+		s2++;
+	}
 	return (memory);
 }
