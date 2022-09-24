@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agserran <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 18:22:20 by agserran          #+#    #+#             */
-/*   Updated: 2022/08/07 21:03:10 by agserran         ###   ########.fr       */
+/*   Created: 2022/06/30 15:16:38 by agserran          #+#    #+#             */
+/*   Updated: 2022/06/30 16:03:50 by agserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strdup(const char *s1)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	char	*memory;
+	size_t	c;
+
+	c = ft_strlen(s1);
+	memory = ft_calloc(c + 1, sizeof(char));
+	if (!memory)
+		return (NULL);
+	ft_memcpy(memory, s1, c);
+	return (memory);
 }

@@ -1,0 +1,5 @@
+.*
+libftTester
+*.o
+*.a
+libft-war-machine
